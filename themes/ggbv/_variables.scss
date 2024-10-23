@@ -1,0 +1,21 @@
+@use "../../core/abstracts/" as *;
+
+$black-100: #000;
+$black-80: #222;
+
+$pink-100: #F19CBB;
+$pink-80: #F1B4CA;
+$pink-60: #F1CCDA;
+$pink-40: #F1E4E9;
+$pink-20: #F1FCF8;
+
+$magenta-lmao: rgba(magenta, 0.8);
+
+$font-family: "Comic Sans MS", "Comic Sans", open-sans, arial, cursive;
+
+$img-cowboy-hat: $external-images + "pink-cowboy-hat.png";
+$img-horse-purple: $external-images + "horse1.gif";
+$img-horse-gold: $external-images + "horse2.gif";
+
+$img-sparkle: $external-images + "sparkle.gif";
+$img-sparkle-rgb: $external-images + "rgbsparkle.gif";

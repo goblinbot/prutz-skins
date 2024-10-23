@@ -1,0 +1,104 @@
+@use "../variables" as *;
+@use "../../../core/abstracts/" as *;
+
+$navbar-padding: 6px;
+$navbar-borders: 2px solid $border-brown;
+
+.subnavbar {
+
+    .subnavbar-inner {
+        background: none;
+        border: 0;
+        line-height: 1;
+    }
+
+    > .container {
+        padding: 0 15px;
+    }
+
+    ul.mainnav {
+        display: flex;
+        border: 0;
+        flex-direction: column;
+        align-items: flex-start;
+        height: 100%;
+
+        > li {
+            background-color: black;
+            border: 0;
+            border-left: $navbar-borders;
+            border-right: $navbar-borders;
+            text-align: left;
+            padding: 0 $navbar-padding;
+            min-width: unset;
+            height: auto;
+            width: 100%;
+
+            // Artificially split the menu in blocks using spacing & borders
+            &:first-of-type,
+            &:nth-child(7),
+            &:nth-child(13) {
+                border-top: $navbar-borders;
+                padding-top: $navbar-padding;
+                position: relative;
+
+                &:before {
+                    color: white;
+                    position: absolute;
+                    top: -8px;
+                    width: 100%;
+                    text-align: center;
+                }
+            }
+
+            &:nth-child(6),
+            &:nth-child(12),
+            &:last-child {
+                border-bottom: $navbar-borders;
+                padding-bottom: $navbar-padding;
+            }
+
+            &:first-of-type:before {
+                content: "Lore";
+            }
+
+            &:nth-child(6),
+            &:nth-child(12) {
+                margin-bottom: 20px;
+            }
+
+            &:nth-child(7):before {
+                content: "Community";
+            }
+
+            &:nth-child(13):before {
+                content: "Support";
+            }
+
+            > a {
+                color: $text-url-green;
+                font-weight: 400;
+                text-shadow: none;
+                font-size: 12px;
+
+                display: inline-flex;
+                align-items: center;
+                margin: 1px 0;
+                padding: 4px 0;
+
+                &:hover {
+                    color: $text-url-green;
+                    text-decoration: underline;
+                }
+
+                > i {
+                    font-size: 12px;
+                    height: 15px;
+                    width: 20px;
+                    margin: 0 8px;
+                }
+            }
+
+        }
+    }
+}

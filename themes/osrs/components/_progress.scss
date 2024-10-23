@@ -1,0 +1,17 @@
+@use "../variables" as *;
+
+progress {
+    background-color: $exp-red;
+    color: $exp-red;
+    border: 1px solid rgba(#333, 0.5);
+
+    &::-moz-progress-bar,
+    &::-webkit-progress-bar {
+        background: $exp-red;
+        background-color: $exp-red;
+    }
+
+    &::-webkit-progress-value {
+        background: $exp-green;
+    }
+}

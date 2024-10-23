@@ -1,0 +1,340 @@
+@use "variables" as *;
+@use "../../core/abstracts/" as *;
+
+@forward "../../core/animations/spin";
+@forward "../../core/animations/wobble";
+@forward "../../core/animations/rgb";
+
+body {
+    background-color: $pink-40;
+    background-image: url(#{$img-horse-purple});
+    background-size: 40px;
+    font-family: $font-family;
+    font-size: 16px;
+    position: relative;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: $font-family;
+    font-weight: 700 !important;
+}
+
+// DROPDOWN
+.dropdown-menu {
+    >li>a {
+        font-size: 20px !important;
+    }
+}
+
+
+// TOP NAV
+.navbar {
+
+    &.navbar-inverse {
+        background: $pink-100;
+
+        // menu
+        .navbar-nav>li {
+
+            >a {
+                color: $black-80 !important;
+                font-size: 24px;
+
+                .caret {
+                    border-top-color: $black-80;
+                    border-bottom-color: $black-80;
+                }
+            }
+
+        }
+    }
+
+    // PRUTZ LOGO
+    .navbar-brand {
+        pointer-events: none;
+
+        >img {
+            animation: spin 1.2s linear infinite;
+        }
+    }
+}
+
+// SECOND NAV
+.subnavbar {
+    .mainnav {
+        >li {
+            >a {
+                color: red;
+                animation: rgb-text 2.4s linear infinite;
+                transition: 0.2s;
+                background-color: transparent;
+
+                &:hover {
+                    background-color: $pink-100;
+                }
+            }
+
+            &:nth-child(2n)>a {
+                animation-delay: 0.6s;
+            }
+
+            &:nth-child(3n)>a {
+                animation-delay: 1.2s;
+            }
+
+            &:nth-child(4n)>a {
+                animation-delay: 1.8s;
+            }
+
+            &:nth-child(5n)>a {
+                animation-delay: 2.4s;
+            }
+
+            &:has(.fa-thumbs-up),
+            &:has(.fa-cutlery),
+            &:has(.fa-comments),
+            &:has(.fa-youtube-play),
+            &:has(.fa-dashboard),
+            &:has(.fa-thumbs-up),
+            &:has(.fa-camera) {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+
+                a {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                }
+
+                span {
+                    display: none;
+                }
+            }
+
+            &:has(.fa-camera) a {
+                animation-delay: 2.4s;
+
+                &:after {
+                    content: "Stuur Dia";
+                }
+            }
+
+            &:has(.fa-dashboard) a:after {
+                content: "Home ranch",
+            }
+
+            &:has(.fa-cutlery) a {
+                animation-delay: 1.8s;
+
+                &:after {
+                    content: "Frikandel XXL";
+                }
+            }
+
+            &:has(.fa-comments) a:after {
+                content: "PIEPJES DELEN";
+            }
+
+            &:has(.fa-youtube-play) a:after {
+                content: "PIEPJES";
+            }
+
+            &:has(.fa-thumbs-up) a {
+                animation-delay: 0.6s;
+
+                &:after {
+                    font-size: 24px;
+                    content: "STOELE";
+                }
+            }
+        }
+    }
+
+    .subnavbar-inner {
+        background: $pink-80;
+    }
+}
+
+
+
+
+.main {
+    font-family: $font-family;
+
+    // PROFILE PICTURES
+    img.img-responsive.pull-right {
+        // animation: wobble 4s linear infinite;
+        border: 2px solid red;
+        border-radius: 8px;
+        border-width: 4px !important;
+        animation: rgb-avatar 2.6s linear infinite;
+
+        position: relative;
+        z-index: 1;
+    }
+
+
+    .widget {
+
+        .widget-content {
+            color: $black-100;
+            text-shadow: magenta 0px 2px 8px;
+
+            font-size: 24px;
+            background-color: $pink-60;
+            background-image: url(#{$img-horse-gold});
+            background-position: left top;
+            background-repeat: no-repeat;
+            position: relative;
+
+            // Sidebar Lijst
+            ul {
+                list-style: none;
+                padding-left: 8px;
+
+                li {
+                    a {
+                        display: block;
+                        text-decoration: none;
+                        color: cyan;
+                        background: rgba(200, 0, 200, 0.6);
+                        background-image: url(#{$img-sparkle-rgb});
+                        border-radius: 4px;
+                        padding: 4px 8px;
+                        transition: 0.2s;
+
+                        &:hover,
+                        &:focus {
+                            padding-left: 32px;
+                        }
+
+                        &:after {
+                            content: "~ UwU";
+                        }
+                    }
+                }
+
+
+                // WILLIAM WAAROM IS ELKE LINK EEN APARTE LIJST WHAT THE FUCK
+                // LIST ITEMS ZIJN EXACT HIERVOOR GEMAAKT
+                +ul {
+                    margin-top: 16px;
+                }
+
+                &:nth-child(2n) li a:after {
+                    // content: " (✿◠‿◠)";
+                    content: " is een cutie"
+                }
+
+                &:nth-child(3n) li a:after {
+                    content: " xDDDD";
+                }
+
+                &:nth-child(4n) li a:after {
+                    content: " OwO wat is dit";
+                }
+
+                &:nth-child(5n) li a:after {
+                    content: " houdt van leuke dingen"
+                }
+
+                &:nth-child(6n) li a:after {
+                    content: "~ Nyaaaa~~~";
+                }
+
+                &:nth-child(7n) li a:after {
+                    content: " voor de memes 5000";
+                }
+
+                &:nth-child(8n) li a {
+                    &:after {
+                        content: "";
+                    }
+
+                    &:before {
+                        content: "Rizzlord ";
+                    }
+                }
+
+                &:has(a[href="/profiel/654"]) li a:after {
+                    font-size: 32px;
+                    content: "~ UwUUUUUUU !!"
+                }
+
+            }
+
+        }
+
+        &:has(img.img-responsive.pull-right) {
+            .widget-header {
+                animation: rgb-border 1.2s linear infinite;
+            }
+
+            .widget-content {
+                position: relative;
+
+                &:after {
+                    content: "";
+                    position: absolute;
+                    height: 240px;
+                    width: 360px;
+                    top: -110px;
+                    right: -40px;
+
+                    background-image: url(#{$img-cowboy-hat});
+                    background-repeat: no-repeat;
+                    background-size: cover;
+                    z-index: +1;
+                }
+
+            }
+
+        }
+    }
+
+
+}
+
+// SIDE
+.widget {
+    .widget-header {
+        background: $magenta-lmao;
+        border-color: $black-100;
+    }
+
+    // COMMENTS
+    &:has(.like-post) {
+
+        .like-post {
+            animation: rgb-text 0.6s linear infinite;
+        }
+
+        .widget-content {
+            font-size: 80px;
+            line-height: normal;
+            background-color: $pink-80;
+
+            .pull-right {
+                padding-left: 15px;
+
+                >a {
+                    animation: spin 24s linear infinite;
+                }
+            }
+
+            img {
+                animation: rgb-border 1.2s linear infinite;
+                border-width: 3px !important;
+                border-radius: 3px;
+            }
+        }
+
+
+    }
+}

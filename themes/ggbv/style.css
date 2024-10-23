@@ -1,0 +1,373 @@
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(359deg);
+  }
+}
+@keyframes wobble {
+  0%, 10% {
+    transform: translateX(0%);
+    transform-origin: 50% 50%;
+  }
+  15% {
+    transform: translateX(-32px) rotate(-10deg);
+  }
+  30% {
+    transform: translateX(16px) rotate(10deg);
+  }
+  45% {
+    transform: translateX(-16px) rotate(-5.5555555556deg);
+  }
+  60% {
+    transform: translateX(9.696969697px) rotate(3.3333333333deg);
+  }
+  75% {
+    transform: translateX(-5.8181818182px) rotate(-2deg);
+  }
+}
+@keyframes rgb-text {
+  100%, 0% {
+    color: rgb(255, 0, 0);
+  }
+  8% {
+    color: rgb(255, 127, 0);
+  }
+  16% {
+    color: rgb(255, 255, 0);
+  }
+  25% {
+    color: rgb(127, 255, 0);
+  }
+  33% {
+    color: rgb(0, 255, 0);
+  }
+  41% {
+    color: rgb(0, 255, 127);
+  }
+  50% {
+    color: rgb(0, 255, 255);
+  }
+  58% {
+    color: rgb(0, 127, 255);
+  }
+  66% {
+    color: rgb(0, 0, 255);
+  }
+  75% {
+    color: rgb(127, 0, 255);
+  }
+  83% {
+    color: rgb(255, 0, 255);
+  }
+  91% {
+    color: rgb(255, 0, 127);
+  }
+}
+@keyframes rgb-avatar {
+  100%, 0% {
+    transform: translateX(0%);
+    transform-origin: 50% 50%;
+    border-color: rgb(255, 0, 0);
+  }
+  8% {
+    border-color: rgb(255, 127, 0);
+  }
+  16% {
+    border-color: rgb(255, 255, 0);
+    transform: translateX(-32px) rotate(-10deg);
+  }
+  25% {
+    border-color: rgb(127, 255, 0);
+  }
+  33% {
+    border-color: rgb(0, 255, 0);
+    transform: translateX(16px) rotate(10deg);
+  }
+  41% {
+    border-color: rgb(0, 255, 127);
+  }
+  50% {
+    border-color: rgb(0, 255, 255);
+    transform: translateX(-16px) rotate(-5.5555555556deg);
+  }
+  58% {
+    border-color: rgb(0, 127, 255);
+  }
+  66% {
+    border-color: rgb(0, 0, 255);
+    transform: translateX(9.696969697px) rotate(3.3333333333deg);
+  }
+  75% {
+    border-color: rgb(127, 0, 255);
+  }
+  83% {
+    border-color: rgb(255, 0, 255);
+    transform: translateX(-5.8181818182px) rotate(-2deg);
+  }
+  91% {
+    border-color: rgb(255, 0, 127);
+  }
+}
+@keyframes rgb-border {
+  100%, 0% {
+    border-color: rgb(255, 0, 0);
+  }
+  8% {
+    border-color: rgb(255, 127, 0);
+  }
+  16% {
+    border-color: rgb(255, 255, 0);
+  }
+  25% {
+    border-color: rgb(127, 255, 0);
+  }
+  33% {
+    border-color: rgb(0, 255, 0);
+  }
+  41% {
+    border-color: rgb(0, 255, 127);
+  }
+  50% {
+    border-color: rgb(0, 255, 255);
+  }
+  58% {
+    border-color: rgb(0, 127, 255);
+  }
+  66% {
+    border-color: rgb(0, 0, 255);
+  }
+  75% {
+    border-color: rgb(127, 0, 255);
+  }
+  83% {
+    border-color: rgb(255, 0, 255);
+  }
+  91% {
+    border-color: rgb(255, 0, 127);
+  }
+}
+body {
+  background-color: #F1E4E9;
+  background-image: url(https://thijsboerma.dev/img/prutz/horse1.gif);
+  background-size: 40px;
+  font-family: "Comic Sans MS", "Comic Sans", open-sans, arial, cursive;
+  font-size: 16px;
+  position: relative;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Comic Sans MS", "Comic Sans", open-sans, arial, cursive;
+  font-weight: 700 !important;
+}
+
+.dropdown-menu > li > a {
+  font-size: 20px !important;
+}
+
+.navbar.navbar-inverse {
+  background: #F19CBB;
+}
+.navbar.navbar-inverse .navbar-nav > li > a {
+  color: #222 !important;
+  font-size: 24px;
+}
+.navbar.navbar-inverse .navbar-nav > li > a .caret {
+  border-top-color: #222;
+  border-bottom-color: #222;
+}
+.navbar .navbar-brand {
+  pointer-events: none;
+}
+.navbar .navbar-brand > img {
+  animation: spin 1.2s linear infinite;
+}
+
+.subnavbar .mainnav > li > a {
+  color: red;
+  animation: rgb-text 2.4s linear infinite;
+  transition: 0.2s;
+  background-color: transparent;
+}
+.subnavbar .mainnav > li > a:hover {
+  background-color: #F19CBB;
+}
+.subnavbar .mainnav > li:nth-child(2n) > a {
+  animation-delay: 0.6s;
+}
+.subnavbar .mainnav > li:nth-child(3n) > a {
+  animation-delay: 1.2s;
+}
+.subnavbar .mainnav > li:nth-child(4n) > a {
+  animation-delay: 1.8s;
+}
+.subnavbar .mainnav > li:nth-child(5n) > a {
+  animation-delay: 2.4s;
+}
+.subnavbar .mainnav > li:has(.fa-thumbs-up), .subnavbar .mainnav > li:has(.fa-cutlery), .subnavbar .mainnav > li:has(.fa-comments), .subnavbar .mainnav > li:has(.fa-youtube-play), .subnavbar .mainnav > li:has(.fa-dashboard), .subnavbar .mainnav > li:has(.fa-thumbs-up), .subnavbar .mainnav > li:has(.fa-camera) {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.subnavbar .mainnav > li:has(.fa-thumbs-up) a, .subnavbar .mainnav > li:has(.fa-cutlery) a, .subnavbar .mainnav > li:has(.fa-comments) a, .subnavbar .mainnav > li:has(.fa-youtube-play) a, .subnavbar .mainnav > li:has(.fa-dashboard) a, .subnavbar .mainnav > li:has(.fa-thumbs-up) a, .subnavbar .mainnav > li:has(.fa-camera) a {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.subnavbar .mainnav > li:has(.fa-thumbs-up) span, .subnavbar .mainnav > li:has(.fa-cutlery) span, .subnavbar .mainnav > li:has(.fa-comments) span, .subnavbar .mainnav > li:has(.fa-youtube-play) span, .subnavbar .mainnav > li:has(.fa-dashboard) span, .subnavbar .mainnav > li:has(.fa-thumbs-up) span, .subnavbar .mainnav > li:has(.fa-camera) span {
+  display: none;
+}
+.subnavbar .mainnav > li:has(.fa-camera) a {
+  animation-delay: 2.4s;
+}
+.subnavbar .mainnav > li:has(.fa-camera) a:after {
+  content: "Stuur Dia";
+}
+.subnavbar .mainnav > li:has(.fa-dashboard) a:after {
+  content: "Home ranch";
+}
+.subnavbar .mainnav > li:has(.fa-cutlery) a {
+  animation-delay: 1.8s;
+}
+.subnavbar .mainnav > li:has(.fa-cutlery) a:after {
+  content: "Frikandel XXL";
+}
+.subnavbar .mainnav > li:has(.fa-comments) a:after {
+  content: "PIEPJES DELEN";
+}
+.subnavbar .mainnav > li:has(.fa-youtube-play) a:after {
+  content: "PIEPJES";
+}
+.subnavbar .mainnav > li:has(.fa-thumbs-up) a {
+  animation-delay: 0.6s;
+}
+.subnavbar .mainnav > li:has(.fa-thumbs-up) a:after {
+  font-size: 24px;
+  content: "STOELE";
+}
+.subnavbar .subnavbar-inner {
+  background: #F1B4CA;
+}
+
+.main {
+  font-family: "Comic Sans MS", "Comic Sans", open-sans, arial, cursive;
+}
+.main img.img-responsive.pull-right {
+  border: 2px solid red;
+  border-radius: 8px;
+  border-width: 4px !important;
+  animation: rgb-avatar 2.6s linear infinite;
+  position: relative;
+  z-index: 1;
+}
+.main .widget .widget-content {
+  color: #000;
+  text-shadow: magenta 0px 2px 8px;
+  font-size: 24px;
+  background-color: #F1CCDA;
+  background-image: url(https://thijsboerma.dev/img/prutz/horse2.gif);
+  background-position: left top;
+  background-repeat: no-repeat;
+  position: relative;
+}
+.main .widget .widget-content ul {
+  list-style: none;
+  padding-left: 8px;
+}
+.main .widget .widget-content ul li a {
+  display: block;
+  text-decoration: none;
+  color: cyan;
+  background: rgba(200, 0, 200, 0.6);
+  background-image: url(https://thijsboerma.dev/img/prutz/rgbsparkle.gif);
+  border-radius: 4px;
+  padding: 4px 8px;
+  transition: 0.2s;
+}
+.main .widget .widget-content ul li a:hover, .main .widget .widget-content ul li a:focus {
+  padding-left: 32px;
+}
+.main .widget .widget-content ul li a:after {
+  content: "~ UwU";
+}
+.main .widget .widget-content ul + ul {
+  margin-top: 16px;
+}
+.main .widget .widget-content ul:nth-child(2n) li a:after {
+  content: " is een cutie";
+}
+.main .widget .widget-content ul:nth-child(3n) li a:after {
+  content: " xDDDD";
+}
+.main .widget .widget-content ul:nth-child(4n) li a:after {
+  content: " OwO wat is dit";
+}
+.main .widget .widget-content ul:nth-child(5n) li a:after {
+  content: " houdt van leuke dingen";
+}
+.main .widget .widget-content ul:nth-child(6n) li a:after {
+  content: "~ Nyaaaa~~~";
+}
+.main .widget .widget-content ul:nth-child(7n) li a:after {
+  content: " voor de memes 5000";
+}
+.main .widget .widget-content ul:nth-child(8n) li a:after {
+  content: "";
+}
+.main .widget .widget-content ul:nth-child(8n) li a:before {
+  content: "Rizzlord ";
+}
+.main .widget .widget-content ul:has(a[href="/profiel/654"]) li a:after {
+  font-size: 32px;
+  content: "~ UwUUUUUUU !!";
+}
+.main .widget:has(img.img-responsive.pull-right) .widget-header {
+  animation: rgb-border 1.2s linear infinite;
+}
+.main .widget:has(img.img-responsive.pull-right) .widget-content {
+  position: relative;
+}
+.main .widget:has(img.img-responsive.pull-right) .widget-content:after {
+  content: "";
+  position: absolute;
+  height: 240px;
+  width: 360px;
+  top: -110px;
+  right: -40px;
+  background-image: url(https://thijsboerma.dev/img/prutz/pink-cowboy-hat.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: 1;
+}
+
+.widget .widget-header {
+  background: rgba(255, 0, 255, 0.8);
+  border-color: #000;
+}
+.widget:has(.like-post) .like-post {
+  animation: rgb-text 0.6s linear infinite;
+}
+.widget:has(.like-post) .widget-content {
+  font-size: 80px;
+  line-height: normal;
+  background-color: #F1B4CA;
+}
+.widget:has(.like-post) .widget-content .pull-right {
+  padding-left: 15px;
+}
+.widget:has(.like-post) .widget-content .pull-right > a {
+  animation: spin 24s linear infinite;
+}
+.widget:has(.like-post) .widget-content img {
+  animation: rgb-border 1.2s linear infinite;
+  border-width: 3px !important;
+  border-radius: 3px;
+}
+
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,66 @@
+@use "../variables" as *;
+@use "../../../core/abstracts/" as *;
+
+.navbar.navbar-inverse {
+    margin-top: 10px;
+    margin-bottom: 175px;
+
+    background: black;
+    border: 2px solid $border-brown;
+    padding: 3px;
+    min-height: 24px;
+    position: relative;
+    line-height: 1;
+
+    &::after {
+        position: absolute;
+        color: white;
+        content: "There are currently 148 Prutzers playing!";
+        text-align: center;
+        top: 170px;
+        width: 100%;
+    }
+
+    >.container {
+        padding: 0 15px;
+    }
+
+    .navbar-header {
+        position: relative;
+
+        .navbar-brand {
+            position: absolute;
+            top: 32px;
+
+            background-image: url(#{$osrs-logo});
+            background-repeat: no-repeat;
+            background-size: contain;
+            width: 260px;
+            height: 116px;
+            left: 0;
+            transform: translate(100%, 0);
+
+            img {
+                display: none;
+                opacity: 0;
+            }
+        }
+    }
+
+    .navbar-nav {
+        >.dropdown>a {
+            padding: 3px;
+            line-height: 1;
+
+            .caret {
+                border-top-color: $text-url-green;
+                border-bottom-color: $text-url-green;
+            }
+        }
+    }
+}
+
+.dropdown-menu>li>a,
+.navbar-inverse .navbar-nav>li>a {
+    color: $text-url-green !important;
+}

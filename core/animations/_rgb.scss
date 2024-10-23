@@ -1,0 +1,124 @@
+
+@keyframes rgb-text {
+    100%,0%{
+        color: rgb(255,0,0);
+    }
+    8%{
+        color: rgb(255,127,0);
+    }
+    16%{
+        color: rgb(255,255,0);
+    }
+    25%{
+        color: rgb(127,255,0);
+    }
+    33%{
+        color: rgb(0,255,0);
+    }
+    41%{
+        color: rgb(0,255,127);
+    }
+    50%{
+        color: rgb(0,255,255);
+    }
+    58%{
+        color: rgb(0,127,255);
+    }
+    66%{
+        color: rgb(0,0,255);
+    }
+    75%{
+        color: rgb(127,0,255);
+    }
+    83%{
+        color: rgb(255,0,255);
+    }
+    91%{
+        color: rgb(255,0,127);
+    }
+}
+
+@keyframes rgb-avatar {
+    100%,0%{
+        transform: translateX(0%);
+        transform-origin: 50% 50%;
+        border-color: rgb(255,0,0);
+    }
+    8%{
+        border-color: rgb(255,127,0);
+    }
+    16%{
+        border-color: rgb(255,255,0);
+        transform: translateX(-32px) rotate(-10deg);
+    }
+    25%{
+        border-color: rgb(127,255,0);
+    }
+    33%{
+        border-color: rgb(0,255,0);
+        transform: translateX(calc(32px / 2)) rotate(10deg);
+    }
+    41%{
+        border-color: rgb(0,255,127);
+    }
+    50%{
+        border-color: rgb(0,255,255);
+        transform: translateX(calc(-32px / 2)) rotate(calc(-10deg / 1.8))
+    }
+    58%{
+        border-color: rgb(0,127,255);
+    }
+    66%{
+        border-color: rgb(0,0,255);
+        transform: translateX(calc(32px / 3.3)) rotate(calc(10deg / 3));
+    }
+    75%{
+        border-color: rgb(127,0,255);
+    }
+    83%{
+        border-color: rgb(255,0,255);
+        transform: translateX(calc(-32px / 5.5)) rotate(calc(-10deg / 5));
+    }
+    91%{
+        border-color: rgb(255,0,127);
+    }
+}
+
+@keyframes rgb-border {
+    100%,0%{
+        border-color: rgb(255,0,0);
+    }
+    8%{
+        border-color: rgb(255,127,0);
+    }
+    16%{
+        border-color: rgb(255,255,0);
+    }
+    25%{
+        border-color: rgb(127,255,0);
+    }
+    33%{
+        border-color: rgb(0,255,0);
+    }
+    41%{
+        border-color: rgb(0,255,127);
+    }
+    50%{
+        border-color: rgb(0,255,255);
+    }
+    58%{
+        border-color: rgb(0,127,255);
+    }
+    66%{
+        border-color: rgb(0,0,255);
+    }
+    75%{
+        border-color: rgb(127,0,255);
+    }
+    83%{
+        border-color: rgb(255,0,255);
+    }
+    91%{
+        border-color: rgb(255,0,127);
+    }
+}

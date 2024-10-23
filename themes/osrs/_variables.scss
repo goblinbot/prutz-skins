@@ -1,0 +1,30 @@
+@use "../../core/abstracts/" as *;
+
+// Images
+$osrs-img-path: $external-images + "osrs/";
+$skill-icons: $osrs-img-path + "/skills/";
+
+$osrs-bg: $osrs-img-path + "bg2.jpg";
+$osrs-logo: $osrs-img-path + "logo.png";
+$osrs-button: $osrs-img-path + "compare_users.gif";
+
+$content-header: $osrs-img-path + "content-before.gif";
+$content-backdrop: $osrs-img-path + "content-backdrop.gif";
+$content-footer: $osrs-img-path + "content-after.gif";
+
+
+// TODO: DL from https://oldschool.runescape.wiki/w/Category:Skill_icons
+
+// Typography
+$osrs-font-path: $external-fonts + "osrs/";
+
+// Colors
+$text-title-brown: #6D4211;
+$text-title-shadow: 1px 1px 1px #000000;
+
+$text-url-green: #90c040;
+$text-url-secondary: #7B4F17;
+
+$border-brown: #382418;
+$exp-green: #078b35;
+$exp-red: #631313;

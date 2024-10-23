@@ -1,0 +1,106 @@
+@use "../variables" as *;
+@use "../../../core/abstracts/" as *;
+
+.main {
+
+    .container>.row {
+        display: flex;
+        flex-direction: column;
+
+        >div {
+            width: 100%;
+        }
+    }
+
+    .col-md-8 {
+        .widget {
+            margin-bottom: 50px;
+            padding-top: 25px;
+            padding-bottom: 25px;
+            position: relative;
+            color: black;
+            background: url(#{$content-backdrop}) repeat-y top center;
+            background-size: contain;
+
+            &:before {
+                background: url(#{$content-header}) no-repeat center top;
+                top: -20px;
+            }
+
+            &:after {
+                background: url(#{$content-footer}) no-repeat center top;
+            }
+
+            &:before,
+            &:after {
+                content: '';
+                background-size: contain;
+                height: 50px;
+                position: absolute;
+                width: calc(100% + 20px);
+                left: -10px;
+            }
+
+            .widget-header,
+            .widget-content {
+                border: 0;
+                background: none;
+            }
+
+            .widget-header {
+
+                .fa {
+                    display: none;
+                }
+
+                h3,
+                a {
+                    color: $text-title-brown !important;
+                    text-shadow: $text-title-shadow;
+                    font-size: 24px;
+                    font-weight: 700;
+                    margin: auto;
+                    text-align: center;
+                    width: 100%;
+                }
+
+                a:hover {
+                    text-decoration: underline;
+                    color: $text-url-secondary !important;
+                }
+            }
+
+            .widget-content {
+
+                a {
+                    color: $text-url-secondary;
+                    font-weight: 700;
+
+                    &:hover {
+                        color: $text-url-secondary;
+                        text-decoration: underline;
+                    }
+                }
+            }
+        }
+    }
+
+    .col-md-4 {
+
+        .widget {
+
+            &:has(.btn.btn-primary) {
+                background-image: url(#{$osrs-button});
+                background-size: contain;
+                background-repeat: no-repeat;
+
+                .widget-header,
+                .widget-content {
+                    border: 0;
+                    background: none;
+                }
+            }
+        }
+    }
+
+}
