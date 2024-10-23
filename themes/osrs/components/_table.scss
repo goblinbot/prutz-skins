@@ -1,0 +1,21 @@
+@use "../variables" as *;
+@use "../../../core/abstracts/" as *;
+
+.widget.widget-table {
+
+    .widget-content {
+        padding: 0 15px;
+
+        @include media-mobile-up {
+            padding: 0 30px;
+        }
+    }
+
+    table {
+
+        td {
+            background: none !important;
+        }
+
+    }
+}

@@ -2,11 +2,12 @@
 
 // Images
 $osrs-img-path: $external-images + "osrs/";
-$skill-icons: $osrs-img-path + "/skills/";
 
 $osrs-bg: $osrs-img-path + "bg2.jpg";
 $osrs-logo: $osrs-img-path + "logo.png";
 $osrs-button: $osrs-img-path + "compare_users.gif";
+
+$ironman-btw: $osrs-img-path + "ironman.png";
 
 $content-header: $osrs-img-path + "content-before.gif";
 $content-backdrop: $osrs-img-path + "content-backdrop.gif";

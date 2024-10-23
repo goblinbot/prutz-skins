@@ -1,0 +1,65 @@
+@use "../variables" as *;
+
+.subnavbar {
+    .subnavbar-inner {
+
+        // icon replacement
+        .fa {
+            background-size: contain;
+            background: url(#{$ironman-btw}) no-repeat center center;
+
+
+            &::before {
+                opacity: 0;
+            }
+        }
+
+        .fa-dashboard {
+            background-image: url(#{$osrs-img-path + "icon-home.png"});
+        }
+
+        .fa-globe {
+            background-image: url(#{$osrs-img-path + "icon-dashboard.gif"});
+        }
+
+        .fa-info-circle {
+            background-image: url(#{$osrs-img-path + "icon-contact.png"});
+        }
+
+        .fa-archive {
+            background-image: url(#{$osrs-img-path + "icon-quest.png"});
+        }
+
+        .fa-camera {
+            background-image: url(#{$osrs-img-path + "icon-photos.png"});
+        }
+
+        .fa-book {
+            background-image: url(#{$osrs-img-path + "icon-gastenboek.gif"});
+        }
+
+        .fa-thumbs-up {
+            background-image: url(#{$osrs-img-path + "icon-stoele.png"});
+        }
+
+        .fa-star-half-o {
+            background-image: url(#{$osrs-img-path + "icon-compo.gif"});
+        }
+
+        .fa-film {
+            background-image: url(#{$osrs-img-path + "icon-status.gif"});
+        }
+
+        .fa-cutlery {
+            background-image: url(#{$osrs-img-path + "icon-cooking.png"});
+        }
+
+        .fa-comments {
+            background-image: url(#{$osrs-img-path + "icon-chat.gif"});
+        }
+
+        .fa-youtube-play {
+            background-image: url(#{$osrs-img-path + "icon-prutzdj.png"});
+        }
+    }
+}

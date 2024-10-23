@@ -57,8 +57,19 @@
             }
 
             .widget-header {
+                text-align: center;
 
-                .fa {
+                .fa.fa-user {
+                    background-image: url(#{$ironman-btw});
+                    background-repeat: no-repeat;
+                    background-size: contain;
+
+                    &::before {
+                        opacity: 0;
+                    }
+                }
+
+                .fa-laptop {
                     display: none;
                 }
 
@@ -69,8 +80,13 @@
                     font-size: 24px;
                     font-weight: 700;
                     margin: auto;
-                    text-align: center;
-                    width: 100%;
+                }
+
+                h3::after {
+                    content: " btw";
+                    color: #333;
+                    font-size: 8px;
+                    text-shadow: none;
                 }
 
                 a:hover {
@@ -81,6 +97,7 @@
                 @include media-mobile-down {
                     h3 {
                         margin-left: -15px;
+                        width: 97.5%;
                     }
                 }
             }
@@ -104,7 +121,7 @@
 
         .widget {
 
-            &:has(.btn.btn-primary) {
+            &:has(.btn.btn-success) {
                 background-image: url(#{$osrs-button});
                 background-size: contain;
                 background-repeat: no-repeat;
