@@ -1,0 +1,10 @@
+@use "../../core/abstracts/" as *;
+
+// Images
+$osrs-img-path: $external-images + "/osrs/";
+$skill-icons: $osrs-img-path + "/skills/";
+
+// TODO: DL from https://oldschool.runescape.wiki/w/Category:Skill_icons
+
+// Typography
+$osrs-font-path: $external-fonts + "/osrs/";

@@ -1,0 +1,28 @@
+{
+    "name": "prutz-skins",
+    "version": "0.0.1",
+    "description": "Prutz-lan profile page stylesheets",
+    "main": "",
+    "scripts": {
+        "start": "npm run sass",
+        "sass": "sass ./themes/",
+        "watch": "sass ./themes/ --watch"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://goblinbot@github.com/goblinbot/prutz-skins.git"
+    },
+    "keywords": [
+        "css",
+        "scss"
+    ],
+    "author": "Thijs Boerma",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/goblinbot/prutz-skins/issues"
+    },
+    "homepage": "https://github.com/goblinbot/prutz-skins#readme",
+    "dependencies": {
+        "sass": "^1.26.10"
+    }
+}
