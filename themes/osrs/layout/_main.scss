@@ -10,6 +10,11 @@
         >div {
             width: 100%;
         }
+
+        @include media-mobile-down {
+            margin-right: 15px;
+            margin-left: 15px;
+        }
     }
 
     .col-md-8 {
@@ -29,6 +34,10 @@
 
             &:after {
                 background: url(#{$content-footer}) no-repeat center top;
+
+                @include media-mobile-down {
+                    bottom: -35px;
+                }
             }
 
             &:before,
@@ -67,6 +76,12 @@
                 a:hover {
                     text-decoration: underline;
                     color: $text-url-secondary !important;
+                }
+
+                @include media-mobile-down {
+                    h3 {
+                        margin-left: -15px;
+                    }
                 }
             }
 

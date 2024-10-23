@@ -6,72 +6,72 @@
     min-height: 100vh;
     background: url(#{$osrs-bg}) repeat-y center top;
     background-size: contain;
-    margin: 0 auto;
-    overflow-y: hidden;
-    padding: 0 50px;
-    width: 100%;
-    max-width: 915px;
-
-    // Actual grid
-    display: grid;
-    grid-template-columns: 260px 1fr;
-    grid-template-rows: auto;
 
 
-    // topnav.scss
-    .navbar.navbar-inverse {
-        grid-area: topnav;
-        grid-row: 1;
-        grid-column: span 2;
-        z-index: 2;
-    }
+    @include media-mobile-up {
+        margin: 0 auto;
+        overflow-y: hidden;
+        padding: 0 50px;
+        width: 100%;
+        max-width: 915px;
 
-    // subnav.scss
-    .subnavbar {
-        grid-area: subnav;
-        grid-row: 2;
-        grid-column: 1;
-    }
+        // Actual grid
+        display: grid;
+        grid-template-columns: 260px 1fr;
+        grid-template-rows: auto;
 
-    // main.scss
-    .main {
-        grid-area: profile;
-        grid-column: 2;
-        grid-row: span 1;
-    }
-
-    &:has(.main .widget-table.action-table) {
-
-        .main {
+        // topnav.scss
+        .navbar.navbar-inverse {
+            grid-area: topnav;
+            grid-row: 1;
             grid-column: span 2;
+            z-index: 2;
+        }
 
-            .container {
-                margin-top: -100px;
+        // subnav.scss
+        .subnavbar {
+            grid-area: subnav;
+            grid-row: 2;
+            grid-column: 1;
+        }
 
-                .row .col-md-8 {
-                    display: grid;
-                    grid-template-columns: 260px 1fr;
-                    grid-template-rows: auto;
-                    
-                    .widget {
-                        grid-column: span 2;
+        // main.scss
+        .main {
+            grid-area: profile;
+            grid-column: 2;
+            grid-row: span 1;
+        }
 
-                        &:first-of-type {
-                            grid-column: 2;
-                            grid-row: 1;
+        &:has(.main .widget-table.action-table) {
 
-                            .widget-content {
-                                min-height: 450px;
+            .main {
+                grid-column: span 2;
+
+                .container {
+                    margin-top: -100px;
+
+                    .row .col-md-8 {
+                        display: grid;
+                        grid-template-columns: 260px 1fr;
+                        grid-template-rows: auto;
+
+                        .widget {
+                            grid-column: span 2;
+
+                            &:first-of-type {
+                                grid-column: 2;
+                                grid-row: 1;
+
+                                .widget-content {
+                                    min-height: 450px;
+                                }
                             }
                         }
                     }
                 }
             }
-        }
 
+        }
     }
 
-
 }
-
-

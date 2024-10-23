@@ -2,15 +2,19 @@
 @use "../../../core/abstracts/" as *;
 
 .navbar.navbar-inverse {
-    margin-top: 10px;
-    margin-bottom: 175px;
 
     background: black;
     border: 2px solid $border-brown;
     padding: 3px;
+    margin-bottom: 140px;
     min-height: 24px;
     position: relative;
     line-height: 1;
+
+    @include media-mobile-up {
+        margin-top: 10px;
+        margin-bottom: 175px;
+    }
 
     &::after {
         position: absolute;
@@ -27,18 +31,23 @@
 
     .navbar-header {
         position: relative;
+        margin: 0 auto;
 
         .navbar-brand {
             position: absolute;
-            top: 32px;
 
             background-image: url(#{$osrs-logo});
             background-repeat: no-repeat;
             background-size: contain;
             width: 260px;
             height: 116px;
-            left: 0;
-            transform: translate(100%, 0);
+
+            left: 50px;
+
+            @include media-mobile-up {
+                left: 0;
+                transform: translate(100%, 0);
+            }
 
             img {
                 display: none;

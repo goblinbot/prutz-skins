@@ -7,7 +7,9 @@
         "start": "npm run sass",
         "sass": "sass ./themes/",
         "watch": "sass ./themes/ --watch",
-        "compressed": "sass ./themes/ -s compressed"
+        "compressed": "sass ./themes/ -s compressed",
+        "compressed-watch": "sass ./themes/ -s compressed --watch"
+
     },
     "repository": {
         "type": "git",

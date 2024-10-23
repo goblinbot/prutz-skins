@@ -34,6 +34,11 @@ $navbar-borders: 2px solid $border-brown;
             height: auto;
             width: 100%;
 
+            @include media-mobile-down {
+                margin-bottom: 0;
+                padding-bottom: 1em;
+            }
+
             // Artificially split the menu in blocks using spacing & borders
             &:first-of-type,
             &:nth-child(7),
@@ -100,5 +105,6 @@ $navbar-borders: 2px solid $border-brown;
             }
 
         }
+
     }
 }
