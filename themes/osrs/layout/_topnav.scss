@@ -41,11 +41,11 @@
             background-size: contain;
             width: 260px;
             height: 116px;
-
-            left: 50px;
+            left: 55px;
 
             @include media-mobile-up {
                 left: 0;
+                top: 32px;
                 transform: translate(100%, 0);
             }
 
