@@ -25,6 +25,13 @@
                 margin-top: 4px;
                 margin-right: 24px;
             }
+
+            // usernames
+            &:has(.fa-comment) {
+                a {
+                    font-weight: 700;
+                }
+            }
         }
 
         // like/dislike blokje

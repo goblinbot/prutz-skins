@@ -1,7 +1,7 @@
 {
     "name": "prutz-skins",
-    "version": "0.0.1",
-    "description": "Prutz-lan profile page stylesheets",
+    "version": "1.0.2",
+    "description": "Prutz-lan profile & clan page stylesheets",
     "main": "",
     "scripts": {
         "start": "npm run sass",

@@ -1,0 +1,86 @@
+@use "../variables" as *;
+@use "../../../core/abstracts/" as *;
+
+@include media-mobile-up {
+    .subnavbar .subnavbar-inner {
+        .mainnav>li {
+
+            // Alle aangepaste menuitems
+            &:has(.fa-cutlery),
+            &:has(.fa-youtube-play),
+            &:has(.fa-thumbs-up),
+            &:has(a[href="/contact"]),
+            &:has(a[href="/informatie"]),
+            &:has(.fa-book),
+            &:has(.fa-archive),
+            &:has(.fa-film),
+            &:has(.fa-gamepad),
+            &:has(.fa-star-half-o),
+            &:has(.fa-comments) {
+                span {
+                    display: none;
+                }
+            }
+
+            // Deze is nutteloos
+            &:has(.fa-dashboard) {
+                display: none !important;
+            }
+
+            // stoele
+            &:has(.fa-thumbs-up) a:after {
+                content: "FlexPlekken";
+            }
+
+            // cafe
+            &:has(.fa-cutlery) a:after {
+                content: "Kantine";
+            }
+
+            // chat
+            &:has(.fa-comments) a:after {
+                content: "Geluiden";
+            }
+
+            //contact
+            &:has(a[href="/contact"]) a:after {
+                content: "HR";
+            }
+
+            //informatie
+            &:has(a[href="/informatie"]) a:after {
+                content: "Core values";
+            }
+
+            // archief
+            &:has(.fa-archive) a:after {
+                content: "Archived";
+            }
+
+            // Gastenboek
+            &:has(.fa-book) a:after {
+                content: "Teams";
+            }
+
+            // Compo's
+            &:has(.fa-star-half-o) a:after {
+                content: "Werkuitjes";
+            }
+
+            // YT
+            &:has(.fa-youtube-play) a:after {
+                content: "Culture";
+            }
+
+            // PrutzBios
+            &:has(.fa-film) a:after {
+                content: "Sjaak's DVDs";
+            }
+
+            // Games
+            &:has(.fa-gamepad) a:after {
+                content: "Uren";
+            }
+        }
+    }
+}

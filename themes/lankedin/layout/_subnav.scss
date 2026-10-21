@@ -1,6 +1,16 @@
 @use "../variables" as *;
 @use "../../../core/abstracts/" as *;
 
+@include media-mobile-down {
+    .subnavbar {
+        .subnavbar-inner {
+            background: $color-li;
+            border: 0;
+        }
+    }
+}
+
+
 @include media-mobile-up {
     .subnavbar {
         background: none;
@@ -26,31 +36,40 @@
                 .mainnav {
                     border: 0;
                     margin-left: auto;
-                    margin-right: 48px;
+                    margin-right: 64px;
+                    height: 64px;
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
+                    gap: 10px;
 
                     >li {
                         border: 0;
-                        border-bottom: 2px solid transparent;
+                        display: flex;
+                        flex-direction: column;
                         transition: 0.3s;
+                        min-width: unset;
                         height: 64px;
-                        max-width: 40px;
-
-                        &:hover,
-                        &:active,
-                        &:focus,
-                        &:focus-within {
-                            border-color: $color-text;
-                        }
+                        width: fit-content;
 
                         >a {
                             color: $color-text-secondary;
+                            display: flex;
+                            flex-direction: column;
+                            text-align: center;
+                            align-items: center;
+                            justify-content: center;
                             text-shadow: none;
+                            padding: 0;
+                            border-bottom: 2px solid transparent;
+                            min-width: 40px;
+                            width: fit-content;
 
                             >i {
                                 color: $color-text-secondary;
                                 text-shadow: none;
                                 transition: 0.3s;
-                                margin: 6px 0 0 0;
+                                margin: 2px 0 0 0;
                                 font-size: 20px;
                                 height: 20px;
                                 width: 20px;
@@ -58,12 +77,14 @@
 
                             >span {
                                 font-size: 12px;
+                                margin-top: 1px;
                             }
 
                             &:hover,
                             &:active,
                             &:focus,
                             &:focus-within {
+                                border-color: $color-text;
                                 color: $color-text;
 
                                 >i {
