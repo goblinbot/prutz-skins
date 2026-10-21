@@ -1,0 +1,25 @@
+@use "../variables" as *;
+
+.main {
+
+    .container > .row {
+        background-color: $df-bg;
+        display: flex;
+        flex-direction: column;
+        max-width: 600px;
+        margin: 0 auto;
+
+        > div {
+            width: 100%;
+
+            .widget {
+                .widget-header,
+                .widget-content {
+                    background: none;
+                    border: none;
+                }
+            }
+        }
+
+    }
+}

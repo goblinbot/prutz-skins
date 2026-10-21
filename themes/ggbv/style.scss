@@ -2,7 +2,7 @@
 @use "../../core/abstracts/" as *;
 
 @forward "../../core/animations/spin";
-@forward "../../core/animations/wobble";
+// @forward "../../core/animations/wobble";
 @forward "../../core/animations/rgb";
 
 body {
@@ -278,13 +278,14 @@ h6 {
 
             .widget-content {
                 position: relative;
+                min-height: 300px;
 
                 &:after {
                     content: "";
                     position: absolute;
                     height: 240px;
                     width: 360px;
-                    top: -110px;
+                    top: -150px;
                     right: -40px;
 
                     background-image: url(#{$img-cowboy-hat});

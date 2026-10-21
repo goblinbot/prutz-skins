@@ -17,7 +17,8 @@
         }
     }
 
-    .col-md-8 {
+    .col-md-8,
+    .col-md-4 {
         .widget {
             margin-bottom: 50px;
             padding-top: 25px;
@@ -59,6 +60,10 @@
             .widget-header {
                 text-align: center;
 
+                .fa {
+                    color: $text-title-brown;
+                }
+
                 .fa.fa-user {
                     background-image: url(#{$ironman-btw});
                     background-repeat: no-repeat;
@@ -69,7 +74,9 @@
                     }
                 }
 
-                .fa-laptop {
+                .fa-laptop,
+                .fa-calendar,
+                .fa-gear {
                     display: none;
                 }
 
@@ -117,21 +124,21 @@
         }
     }
 
-    .col-md-4 {
+    .col-md-4 .widget:has(.btn.btn-success) {
+        background-image: url(#{$osrs-button});
+        background-size: contain;
+        background-repeat: no-repeat;
+        width: 200px;
 
-        .widget {
+        &::before,
+        &::after {
+            display: none;
+        }
 
-            &:has(.btn.btn-success) {
-                background-image: url(#{$osrs-button});
-                background-size: contain;
-                background-repeat: no-repeat;
-
-                .widget-header,
-                .widget-content {
-                    border: 0;
-                    background: none;
-                }
-            }
+        .widget-header,
+        .widget-content {
+            border: 0;
+            background: none;
         }
     }
 

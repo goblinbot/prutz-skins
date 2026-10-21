@@ -1,0 +1,59 @@
+html {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  background-color: black;
+  background-image: url(https://thijsboerma.dev/img/prutz/df/back.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: #fff;
+}
+
+.navbar.navbar-inverse {
+  background-color: #1c0e00;
+  display: none;
+}
+
+.subnavbar {
+  margin-bottom: 0;
+  max-width: 800px;
+  margin: 0 auto;
+}
+.subnavbar .subnavbar-inner {
+  background-color: #1c0e00;
+  height: 100%;
+}
+.subnavbar .mainnav {
+  max-width: 800px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  height: 100%;
+}
+
+.main .container > .row {
+  background-color: #1c0e00;
+  display: flex;
+  flex-direction: column;
+  max-width: 600px;
+  margin: 0 auto;
+}
+.main .container > .row > div {
+  width: 100%;
+}
+.main .container > .row > div .widget .widget-header,
+.main .container > .row > div .widget .widget-content {
+  background: none;
+  border: none;
+}
+
+/*# sourceMappingURL=style.css.map */

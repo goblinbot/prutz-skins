@@ -1,0 +1,26 @@
+@use "../variables" as *;
+
+.navbar.navbar-inverse {
+    background-color: $df-bg;
+    display: none;
+}
+
+.subnavbar {
+    margin-bottom: 0;
+    max-width: 800px;
+    margin: 0 auto;
+
+    .subnavbar-inner {
+        background-color: $df-bg;
+        height: 100%;
+    }
+
+    .mainnav {
+        max-width: 800px;
+        margin: 0 auto;
+        display: flex;
+        flex-wrap: wrap;
+        height: 100%;
+    }
+}
+

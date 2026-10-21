@@ -1,0 +1,10 @@
+@use "../../core/abstracts/" as *;
+@use "variables" as *;
+
+body {
+    background-color: black;
+    background-image: url(#{$df-img + "back.png"});
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: #fff;
+}
