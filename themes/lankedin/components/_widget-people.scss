@@ -106,7 +106,7 @@
                 }
 
                 &:nth-child(10n) li a:after {
-                    content: "CHO CBA AFK CTE";
+                    content: "CHO CBA A.F.K. CTE CBT";
                 }
 
                 &:nth-child(11n) li a:after {
@@ -118,7 +118,7 @@
                 }
 
                 &:nth-child(13n) li a:after {
-                    content: "Risk Management & Assasment";
+                    content: "Risk Management & Assesment";
                 }
 
                 &:nth-child(14n) li a:after {
@@ -139,6 +139,14 @@
 
                 &:nth-child(18n) li a:after {
                     content: "HR | Challenger of Status Quo";
+                }
+
+                &:nth-child(19n) li a:after {
+                    content: "Aspirant Product Owner";
+                }
+
+                &:nth-child(20n) li a:after {
+                    content: "Vingerverf Coach";
                 }
             }
 

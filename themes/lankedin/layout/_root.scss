@@ -2,5 +2,9 @@
 @use "../../../core/abstracts/" as *;
 
 #root {
-    padding-top: 100px;
+    padding-top: 64px;
+
+    @include media-mobile-up {
+        padding-top: 100px;
+    }
 }

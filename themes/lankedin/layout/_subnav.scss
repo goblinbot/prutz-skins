@@ -1,75 +1,77 @@
 @use "../variables" as *;
 @use "../../../core/abstracts/" as *;
 
-.subnavbar {
-    background: none;
-    position: absolute;
-    top: 0;
-    left: 130px;
-    right: 70px;
-    width: 100%;
-    max-width: calc(100vw - 200px);
-    z-index: 2;
-
-    .subnavbar-inner {
+@include media-mobile-up {
+    .subnavbar {
         background: none;
-        border: 0;
+        position: absolute;
+        top: 0;
+        left: 130px;
+        right: 70px;
+        width: 100%;
+        max-width: calc(100vw - 200px);
+        z-index: 2;
 
-        .container {
-            max-width: unset !important;
+        .subnavbar-inner {
+            background: none;
+            border: 0;
 
-            .subnav-collapse {
-                display: flex !important;
-            }
+            .container {
+                max-width: unset !important;
 
-            .mainnav {
-                border: 0;
-                margin-left: auto;
-                margin-right: 24px;
+                .subnav-collapse {
+                    display: flex !important;
+                }
 
-                >li {
+                .mainnav {
                     border: 0;
-                    border-bottom: 2px solid transparent;
-                    transition: 0.3s;
-                    height: 64px;
-                    max-width: 40px;
+                    margin-left: auto;
+                    margin-right: 48px;
 
-                    &:hover,
-                    &:active,
-                    &:focus,
-                    &:focus-within {
-                        border-color: $color-text;
-                    }
-
-                    >a {
-                        color: $color-text-secondary;
-                        text-shadow: none;
-
-                        >i {
-                            color: $color-text-secondary;
-                            text-shadow: none;
-                            transition: 0.3s;
-                            margin: 6px 0 0 0;
-                            font-size: 20px;
-                            height: 20px;
-                            width: 20px;
-                        }
-
-                        >span {
-                            font-size: 12px;
-                        }
+                    >li {
+                        border: 0;
+                        border-bottom: 2px solid transparent;
+                        transition: 0.3s;
+                        height: 64px;
+                        max-width: 40px;
 
                         &:hover,
                         &:active,
                         &:focus,
                         &:focus-within {
-                            color: $color-text;
-
-                            >i {
-                                color: $color-text;
-                            }
+                            border-color: $color-text;
                         }
 
+                        >a {
+                            color: $color-text-secondary;
+                            text-shadow: none;
+
+                            >i {
+                                color: $color-text-secondary;
+                                text-shadow: none;
+                                transition: 0.3s;
+                                margin: 6px 0 0 0;
+                                font-size: 20px;
+                                height: 20px;
+                                width: 20px;
+                            }
+
+                            >span {
+                                font-size: 12px;
+                            }
+
+                            &:hover,
+                            &:active,
+                            &:focus,
+                            &:focus-within {
+                                color: $color-text;
+
+                                >i {
+                                    color: $color-text;
+                                }
+                            }
+
+                        }
                     }
                 }
             }

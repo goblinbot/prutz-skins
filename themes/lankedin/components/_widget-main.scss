@@ -61,5 +61,16 @@ $-padding-t: 128px;
         z-index: 1;
     }
 
+    // text wrapping fix ivm absolute image enzo
+
+    @include media-mobile-down {
+        .widget-content {
+            padding-top: 64px;
+
+            .pull-right {
+                top: -182px;
+            }
+        }
+    }
 
 }
