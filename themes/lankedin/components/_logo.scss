@@ -1,0 +1,21 @@
+@use "../variables" as *;
+@use "../../../core/abstracts/" as *;
+
+.navbar.navbar-inverse {
+    .navbar-header {
+        .navbar-brand {
+            background-image: url(#{$logo-url});
+            background-repeat: no-repeat;
+            background-size: contain;
+
+            height: 64px;
+            width: 116px;
+            left: 16px;
+            
+            img {
+                display: none;
+                opacity: 0;
+            }
+        }
+    }
+}

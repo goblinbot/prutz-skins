@@ -1,0 +1,16 @@
+@use "../variables" as *;
+
+.alert {
+
+    &.alert-info {
+        color: $color-background;
+        font-weight: 700;
+        background-color: $color-alert;
+        border-color: $color-alert;
+
+        .close {
+            color: $color-background;
+            opacity: 1;
+        }
+    }
+}

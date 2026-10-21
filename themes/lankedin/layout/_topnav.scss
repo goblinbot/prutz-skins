@@ -1,0 +1,17 @@
+@use "../variables" as *;
+@use "../../../core/abstracts/" as *;
+
+.navbar.navbar-inverse {
+    background: none;
+    border: 0;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    z-index: 1;
+
+    > .container {
+        max-width: unset !important;
+        padding: 0 15px;
+    }
+}
