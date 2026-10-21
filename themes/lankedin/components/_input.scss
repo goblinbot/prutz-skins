@@ -1,0 +1,9 @@
+@use "../variables" as *;
+@use "../../../core/abstracts/" as *;
+
+.emoji-wysiwyg-editor.form-control {
+    background: $color-background;
+    border-radius: $border-radius-inputs;
+    border-color: $color-text-secondary !important;
+    color: $color-text;
+}

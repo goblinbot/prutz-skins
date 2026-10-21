@@ -1,0 +1,184 @@
+@use "../variables" as *;
+@use "../../../core/abstracts/" as *;
+
+.widget {
+
+    // Beide toepasbaar {
+    &:has(i.fa.fa-user-secret),
+    &:has(i.fa.fa-users) {
+
+        .widget-header {
+            h3 {
+                display: block;
+                padding-top: 8px;
+                visibility: hidden;
+
+                &::before {
+                    content: " ";
+                    visibility: visible;
+                }
+            }
+        }
+
+        .widget-content {
+            padding-top: 12px;
+
+            ul {
+                list-style: none;
+                padding-left: 8px;
+
+                li {
+
+                    a {
+                        display: block;
+                        text-decoration: none;
+                        color: $color-text;
+                        font-weight: 700;
+                        padding: 4px 8px 4px 56px;
+                        position: relative;
+
+                        &:hover,
+                        &:active,
+                        &:focus {
+                            color: $color-li-dark;
+                        }
+
+                        &::before {
+                            content: "";
+                            left: 0;
+                            position: absolute;
+
+                            background-color: $color-block-muted;
+                            background-image: url($missing-avatar-url);
+                            background-size: 110%;
+                            background-position: center center;
+                            border: 1px solid $color-border-feed;
+                            border-radius: 100%;
+
+                            top: 8px;
+                            height: 40px;
+                            width: 40px;
+                        }
+
+                        &:after {
+                            display: block;
+                            color: $color-text-mute;
+                            font-weight: 400;
+                        }
+                    }
+
+                }
+
+                &:nth-child(1n) li a:after {
+                    content: "Innovator";
+                }
+
+                &:nth-child(2n) li a:after {
+                    content: "Synergy Engineer";
+                }
+
+                &:nth-child(3n) li a:after {
+                    content: "Lead Assistant Vice Consultant";
+                }
+
+                &:nth-child(4n) li a:after {
+                    content: "Consultant-Analyst";
+                }
+
+                &:nth-child(5n) li a:after {
+                    content: "Medior LinkedInfluencer";
+                }
+
+                &:nth-child(6n) li a:after {
+                    content: "Buzzword Technician";
+                }
+
+                &:nth-child(7n) li a:after {
+                    content: "Management Trainee";
+                }
+
+                &:nth-child(8n) li a:after {
+                    content: "Agile Prince32 Scrum TurboWaterval Engineer";
+                }
+
+                &:nth-child(9n) li a:after {
+                    content: "Looking for work";
+                }
+
+                &:nth-child(10n) li a:after {
+                    content: "CHO CBA AFK CTE";
+                }
+
+                &:nth-child(11n) li a:after {
+                    content: "Exact Guru";
+                }
+
+                &:nth-child(12n) li a:after {
+                    content: "Wellness Technician | Treinvertraging Officier";
+                }
+
+                &:nth-child(13n) li a:after {
+                    content: "Risk Management & Assasment";
+                }
+
+                &:nth-child(14n) li a:after {
+                    content: "Flight Risk";
+                }
+
+                &:nth-child(15n) li a:after {
+                    content: "Assistant Regional Manager";
+                }
+
+                &:nth-child(16n) li a:after {
+                    content: "Senior Consultant 13 Pro Max";
+                }
+
+                &:nth-child(17n) li a:after {
+                    content: "Penetration Engineer";
+                }
+
+                &:nth-child(18n) li a:after {
+                    content: "HR | Challenger of Status Quo";
+                }
+            }
+
+        }
+
+
+    }
+
+    // Clan leider(s)
+    &:has(i.fa.fa-user-secret) {
+        .widget-header {
+            h3::before {
+                content: "C-Suite Executives";
+            }
+        }
+
+        .widget-content ul li a:after {
+            content: "CEO";
+        }
+    }
+
+    // Clan leden & Vrienden van Clan
+    &:has(i.fa.fa-users) {
+        .widget-header {
+            h3::before {
+                content: "Medewerkers van GG B.V.";
+            }
+        }
+    }
+
+    // Target Szeyu om het Vrienden Van blokje te hernoemen
+    &:has(a[href="/profiel/436"]) {
+
+        .widget-header h3::before {
+            content: "Andere connecties" !important;
+        }
+
+        .widget-content ul li a:after {
+            content: "Onbetaalde stagiaire" !important;
+        }
+
+    }
+}

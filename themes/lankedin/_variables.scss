@@ -7,6 +7,8 @@ $color-block-muted: rgb(244, 242, 238);
 $color-nav-inactive: rgba(0, 0, 0, 0.6);
 $color-alert: #5c6f7c;
 
+$color-border-feed: rgba(0,0,0, 0.08);
+
 $color-li-light: #AAD6FF;
 $color-li: #0a66c2;
 $color-li-dark: #004182;
@@ -17,6 +19,7 @@ $color-text-secondary: #5B5B66;
 $color-white: #FFF;
 
 $border-radius-inputs: 4px;
+$border-radius-feed: 8px;
 $border-radius-buttons: 24px;
 
 $font-size: 16px;
@@ -39,3 +42,4 @@ Segoe UI Emoji,
 Segoe UI Symbol;
 
 $logo-url: $external-images + "lankedin.png";
+$missing-avatar-url: "/images/missing_avatar.png";

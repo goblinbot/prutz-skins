@@ -1,0 +1,54 @@
+@use "../variables" as *;
+@use "../../../core/abstracts/" as *;
+
+.btn {
+    border: 1px solid transparent;
+    border-radius: $border-radius-buttons;
+    transition: 0.3s;
+    font-weight: 600;
+    min-height: 48px;
+    padding: 12px 24px;
+
+    // comment button
+    &.btn-default {
+        background: $color-li;
+        color: $color-white;
+
+        &:active,
+        &:focus,
+        &:hover,
+        &:focus-within {
+            border-color: transparent;
+            background-color: $color-li-dark;
+        }
+    }
+
+    // edit clan
+    &.btn-success {
+        background: $color-li;
+        color: $color-white;
+
+        &:active,
+        &:focus,
+        &:hover,
+        &:focus-within {
+            border-color: transparent;
+            background-color: $color-li-dark;
+        }
+    }
+
+    // clan verlaat
+    &.btn-danger {
+        background: $color-white;
+        border-color: $color-li;
+        color: $color-li;
+
+        &:active,
+        &:focus,
+        &:hover,
+        &:focus-within {
+            border-color: transparent;
+            background-color: $color-li-light;
+        }
+    }
+}

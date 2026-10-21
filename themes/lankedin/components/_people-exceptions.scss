@@ -1,0 +1,121 @@
+@use "../variables" as *;
+@use "../../../core/abstracts/" as *;
+
+// Naampjes voor personen specifiek omdat het kan
+.widget {
+
+    &:has(i.fa.fa-user-secret),
+    &:has(i.fa.fa-users) {
+
+        // copypasta voorbeeld
+        // &:has(a[href="/profiel/17"]) a::after {}
+
+
+        // target user urls
+        .widget-content ul li {
+
+            // madnuzz
+            &:has(a[href="/profiel/17"]) a::after {
+                content: "Chief International Relations";
+            }
+
+            // waltarb
+            &:has(a[href="/profiel/60"]) a::after {
+                content: "CTO (terug van sabbatical)";
+            }
+
+            // ggbot
+            &:has(a[href="/profiel/104"]) a::after {
+                content: "CEO of GGbot en vrienden";
+            }
+
+            // Bolleno
+            &:has(a[href="/profiel/94"]) a::after {
+                content: "Head Cybersecurity & Zomerzwembad Verkoop";
+            }
+
+            // Wimpie
+            &:has(a[href="/profiel/102"]) a::after {
+                content: "Floor Management | Locatiebeheer";
+            }
+
+            // Coensy
+            &:has(a[href="/profiel/60"]) a::after {
+                content: "Chief Personeels-transport";
+            }
+
+            // Daaz
+            &:has(a[href="/profiel/209"]) a::after {
+                content: "Hoofd PR | Afdeling JaJaJA";
+            }
+
+            // Gefroin
+            &:has(a[href="/profiel/207"]) a::after {
+                content: "In-house Fitness Model";
+            }
+
+            // Sanne
+            &:has(a[href="/profiel/109"]) a::after {
+                content: "Chief-of-Brand";
+            }
+
+            // Jofuz
+            &:has(a[href="/profiel/130"]) a::after {
+                content: "Bedrijfspapa";
+            }
+
+            // JohnnyLocoNL
+            &:has(a[href="/profiel/121"]) a::after {
+                content: "Certified pump(ings) operator";
+            }
+
+            // Baeyu
+            &:has(a[href="/profiel/124"]) a::after {
+                content: "Op staande voet ontslagen";
+            }
+
+            // Perzik
+            &:has(a[href="/profiel/233"]) a::after {
+                content: "Senior Agile Hand-Sanitization technician";
+            }
+
+            // Vee
+            &:has(a[href="/profiel/279"]) a::after {
+                content: "Solution to the Solution Engineers | Pharmacy";
+            }
+
+            // Zoudrex
+            &:has(a[href="/profiel/139"]) a::after {
+                content: "Afdeling kartonnen crack";
+            }
+
+            // Ferri
+            &:has(a[href="/profiel/112"]) a::after {
+                content: "Dynamisch Entrepeneur | Voormalig uitgemaakt voor Duits";
+            }
+
+            // Zuurstofarm
+            &:has(a[href="/profiel/344"]) a::after {
+                content: "B.R.A.K.";
+            }
+
+            // Jason
+            &:has(a[href="/profiel/242"]) a::after {
+                content: "Expert RamRanch Engineer | Gezellige Geluidjes";
+            }
+
+            // Tinik
+            &:has(a[href="/profiel/323"]) a::after {
+                content: "Senior Janitorial Technician";
+            }
+
+            // Lorai
+            &:has(a[href="/profiel/654"]) a::after {
+                content: "Marketing manager | Scrum Master | Nepo-hire";
+            }
+        }
+
+
+    }
+
+}

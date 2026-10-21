@@ -1,0 +1,71 @@
+@use "../variables" as *;
+@use "../../../core/abstracts/" as *;
+
+// Plaats comment
+.widget:has(.guestbook) {
+    center {
+        float: left;
+    }
+
+    .btn {
+        font-weight: 500;
+    }
+}
+
+// Comments
+.widget:has(i.fa.fa-comment) {
+    
+    .widget-header {
+        h3 {
+            color: $color-text-secondary !important;
+            font-size: 14px;
+
+            // secondary h3 (like/dislike)
+            &:has(.like-post) {
+                margin-top: 4px;
+                margin-right: 24px;
+            }
+        }
+
+        // like/dislike blokje
+        .like-post {
+            i {
+                color: $color-li !important;
+                
+                height: unset;
+                width: unset;
+                opacity: 1;
+                visibility: visible;
+
+                &:hover, &:active, &:focus, &:focus-within {
+                    color: $color-li-dark !important;
+                }
+            }
+
+            + span {
+                color: $color-text-mute !important;
+                font-weight: 700;
+            }
+        }
+    }
+
+    .widget-content {
+        padding-bottom: 24px;
+
+        // avatars
+        .pull-right {
+            float: left !important;
+
+            a {
+                img {
+                    margin-right: 12px;
+                    border-radius: 100%;
+                    height: 80px;
+                    width: 80px;
+                    border: 2px solid $color-border-feed !important;
+                }
+            }
+
+        }
+    }
+}

@@ -21,10 +21,14 @@ h6 {
     font-weight: 700 !important;
 }
 
-.emoji-wysiwyg-editor.form-control {
-    background: $color-white;
-}
-
 a {
     transition: 0.3s;
+    color: $color-li;
+
+    &:focus,
+    &:focus-within,
+    &:hover,
+    &:active {
+        color: $color-li-dark;
+    }
 }

@@ -2,7 +2,7 @@
 @use "../../../core/abstracts/" as *;
 
 .navbar.navbar-inverse {
-    background: none;
+    background: $color-white;
     border: 0;
     position: absolute;
     left: 0;
